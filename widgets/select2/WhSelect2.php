@@ -99,6 +99,7 @@ class WhSelect2 extends CInputWidget
         $cs = Yii::app()->getClientScript();
 
         $cs->registerCssFile($assetsUrl . '/css/select2.css');
+        $cs->registerCssFile($assetsUrl . '/css/select2-bootstrap.css');
         $cs->registerScriptFile($assetsUrl . '/js/select2.js');
 
 
