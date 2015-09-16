@@ -88,7 +88,7 @@ class WhDateTimePicker extends CInputWidget
             list($name, $id) = $this->resolveNameID();
 
             $options['id'] = $id . '_datetimepicker';
-            TbHtml::addCssClass('input-append', $options);
+            TbHtml::addCssClass('input-group', $options);
 
             echo TbHtml::openTag('div', $options);
             if ($this->hasModel()) {
@@ -96,8 +96,8 @@ class WhDateTimePicker extends CInputWidget
             } else {
                 echo TbHtml::textField($name, $this->value, $this->htmlOptions);
             }
-            echo TbHtml::openTag('span', array('class' => 'add-on'));
-            echo '<i data-time-icon="' . $this->iconTime . '" data-date-icon="' . $this->iconDate . '"></i>';
+            echo TbHtml::openTag('span', array('class' => 'input-group-addon'));
+            echo '<i data-time-icon="' . $this->iconTime . '" data-date-icon="' . $this->iconDate . '" ' . 'class="glyphicon glyphicon-th"' . '></i>';
             echo TbHtml::closeTag('span');
             echo TbHtml::closeTag('div');
         }
